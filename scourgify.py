@@ -34,4 +34,5 @@ except FileNotFoundError:
 
 with open(sys.argv[2], 'w') as file:
     writer = csv.DictWriter(file, fieldnames=['first', 'last', 'house'])
+    writer.writeheader()
     writer.writerows(students)
